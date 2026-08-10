@@ -1,0 +1,43 @@
+name: Monitor Licitaciones
+
+on:
+  schedule:
+    # 13:00 UTC = 9:00 Caracas (UTC-4, sin horario de verano), Lunes a Viernes
+    - cron: '0 13 * * 1-5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar chequeo de licitaciones
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python check_licitaciones.py
+
+      - name: Guardar estado actualizado
+        run: |
+          git config user.name "licitaciones-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualiza estado de monitoreo [skip ci]"
+            git push
+          else
+            echo "Sin cambios de estado para commitear."
+          fi

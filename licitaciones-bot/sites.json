@@ -1,0 +1,69 @@
+[
+  {
+    "id": "mx_chihuahua",
+    "nombre": "México (Chihuahua) - Gobierno del Estado",
+    "url": "https://ieechihuahua.org.mx/licitaciones",
+    "notas": ""
+  },
+  {
+    "id": "guatemala",
+    "nombre": "Guatemala - GuateCompras",
+    "url": "https://www.guatecompras.gt/",
+    "notas": ""
+  },
+  {
+    "id": "peru",
+    "nombre": "Perú - OECE (gob.pe)",
+    "url": "https://www.gob.pe/oece",
+    "notas": ""
+  },
+  {
+    "id": "colombia_secop",
+    "nombre": "Colombia - SECOP",
+    "url": "https://www.colombiacompra.gov.co/secop",
+    "notas": "Requiere inicio de sesión para ver licitaciones",
+    "requiere_login": true
+  },
+  {
+    "id": "costa_rica",
+    "nombre": "Costa Rica - SICOP",
+    "url": "https://www.sicop.go.cr/app",
+    "notas": "Portal dinámico (SPA); verificar si requests captura el contenido"
+  },
+  {
+    "id": "mx_edomex",
+    "nombre": "México (Estado de México) - CompraMex",
+    "url": "https://compramex.edomex.gob.mx/",
+    "notas": ""
+  },
+  {
+    "id": "mx_baja_california",
+    "nombre": "México (Baja California) - Licitaciones",
+    "url": "https://tramites.ebajacalifornia.gob.mx/Compras/Licitaciones",
+    "notas": ""
+  },
+  {
+    "id": "honduras_cne",
+    "nombre": "Honduras - CNE (Consejo Nacional Electoral)",
+    "url": "https://portalunico.iaip.gob.hn/352/12/",
+    "notas": ""
+  },
+  {
+    "id": "el_salvador_tse",
+    "nombre": "El Salvador - Tribunal Supremo Electoral",
+    "url": "https://transparencia.tse.gob.sv/laip_tse/index.php/marcopresupuestario/inventario-5/licitaciones",
+    "notas": ""
+  },
+  {
+    "id": "panama",
+    "nombre": "Panamá - PanamaCompra",
+    "url": "https://www.panamacompra.gob.pa/",
+    "notas": "Portal dinámico; verificar si requests captura el contenido"
+  },
+  {
+    "id": "republica_dominicana",
+    "nombre": "República Dominicana - DGCP",
+    "url": "https://www.dgcp.gob.do/",
+    "notas": ""
+  }
+]
